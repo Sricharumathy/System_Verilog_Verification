@@ -14,6 +14,9 @@ class driver;
       vif.b=trans.b;
       vif.c=trans.c;
       #1;
+       -> vif.transaction_driven;
+      #1;
+      
     end
   endtask
 endclass
