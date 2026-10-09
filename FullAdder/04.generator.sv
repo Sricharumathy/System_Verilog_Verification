@@ -6,6 +6,7 @@ class generator;
   endfunction
   task run();
     repeat(8) begin
+      #1;
       trans=new();
       if(!trans.randomize())
         $display("Randomization Failed");
