@@ -4,5 +4,4 @@ interface intf;
   logic c;
   logic sum;
   logic carry;
-  event transaction_driven;
 endinterface
