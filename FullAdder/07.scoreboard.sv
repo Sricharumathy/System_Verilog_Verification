@@ -13,9 +13,14 @@ class scoreboard;
       exp_carry=((trans.a & trans.b)|(trans.b & trans.c)|(trans.c & trans.a));
       if(trans.sum ==exp_sum && trans.carry == exp_carry) begin
         $display("Verification Passed");
+        $display("[SCB] PASS a=%0b b=%0b c=%0b | sum=%0b carry=%0b",
+                 trans.a, trans.b, trans.c, trans.sum, trans.carry);
       end
       else begin
         $display("Verification Failed");
+         $display("[SCB] FAIL a=%0b b=%0b c=%0b | sum=%0b (exp %0b) carry=%0b (exp %0b)",
+                 trans.a, trans.b, trans.c, trans.sum, exp_sum, trans.carry, exp_carry);
+
       end
     end
   endtask
