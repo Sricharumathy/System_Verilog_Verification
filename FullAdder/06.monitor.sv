@@ -7,7 +7,8 @@ class monitor;
     this.mon2scb=mon2scb;
   endfunction
   task run();
-    forever begin
+    repeat(8) begin
+     @(vif.transaction_driven);
       trans=new();
       trans.a=vif.a;
       trans.b=vif.b;
@@ -15,7 +16,7 @@ class monitor;
       trans.sum=vif.sum;
       trans.carry=vif.carry;
       mon2scb.put(trans);
-      #1;
+      
     end
   endtask
 endclass
