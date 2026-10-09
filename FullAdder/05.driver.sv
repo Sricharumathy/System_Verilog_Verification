@@ -8,15 +8,12 @@ class driver;
     this.gen2drive=gen2drive;
   endfunction
   task run(); 
-    forever begin
+    repeat(8) begin
+      #2;
       gen2drive.get(trans);
       vif.a=trans.a;
       vif.b=trans.b;
-      vif.c=trans.c;
-      #1;
-       -> vif.transaction_driven;
-      #1;
-      
+      vif.c=trans.c;      
     end
   endtask
 endclass
