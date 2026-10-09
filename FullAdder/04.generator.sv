@@ -7,9 +7,14 @@ class generator;
   task run();
     repeat(8) begin
       trans=new();
-      trans.randomize();
-      $display("a=%0d,b=%0d,c=%0d",trans.a,trans.b,trans.c);
-      gen2drive.put(trans);
+      if(!trans.randomize())
+        $display("Randomization Failed");
+      else begin
+        $display("Randomization Passed");
+        $display("[GEN] a=%0b b=%0b c=%0b", trans.a, trans.b, trans.c);
+        gen2drive.put(trans);
+      end
     end
   endtask
 endclass
+      
