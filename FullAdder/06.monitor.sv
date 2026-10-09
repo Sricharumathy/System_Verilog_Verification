@@ -8,7 +8,7 @@ class monitor;
   endfunction
   task run();
     repeat(8) begin
-     @(vif.transaction_driven);
+      #3;
       trans=new();
       trans.a=vif.a;
       trans.b=vif.b;
