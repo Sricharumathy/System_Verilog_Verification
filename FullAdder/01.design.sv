@@ -1,4 +1,4 @@
+// Code your design here
 module fulladder(input a,b,c,output sum,carry);
-  assign sum=a^b^c;
-  assign carry=a&b|b&c|c&a;
+  assign {carry,sum}=a+b+c;
 endmodule
