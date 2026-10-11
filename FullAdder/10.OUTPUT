@@ -1,0 +1,33 @@
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+----------Generator----------
+a=1,b=1,c=0,sum=0,carry=0
+------------------------------------------------
+----------Driver----------
+a=1,b=1,c=0,sum=0,carry=0
+------------------------------------------------
+----------Monitor----------
+a=1,b=1,c=0,sum=0,carry=1
+------------------------------------------------
+Verification Passed!
+----------ScoreBoard----------
+a=1,b=1,c=0,sum=0,carry=1
+------------------------------------------------
+----------Generator----------
+a=0,b=1,c=0,sum=0,carry=0
+------------------------------------------------
+----------Monitor----------
+a=1,b=1,c=0,sum=0,carry=1
+------------------------------------------------
+----------Driver----------
+a=0,b=1,c=0,sum=0,carry=0
+------------------------------------------------
+Verification Passed!
+----------ScoreBoard----------
+a=1,b=1,c=0,sum=0,carry=1
+------------------------------------------------
+Simulation complete via $finish(1) at time 6 NS + 0
+./testbench.sv:19     $finish;
+xcelium> exit
+TOOL:	xrun	25.03-s001: Exiting on Oct 11, 2026 at 08:04:51 EDT  (total: 00:00:01)
+Done
