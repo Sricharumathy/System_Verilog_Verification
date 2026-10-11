@@ -1,0 +1,47 @@
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+Randomization Passed!
+[GEN] rst=1,d=1,q=0
+Randomization Passed!
+[GEN] rst=0,d=0,q=0
+Randomization Passed!
+[GEN] rst=1,d=1,q=0
+Randomization Passed!
+[GEN] rst=1,d=0,q=0
+Randomization Passed!
+[GEN] rst=0,d=0,q=0
+Randomization Passed!
+[GEN] rst=0,d=0,q=0
+Randomization Passed!
+[GEN] rst=1,d=0,q=0
+Randomization Passed!
+[GEN] rst=1,d=1,q=0
+Randomization Passed!
+[GEN] rst=0,d=1,q=0
+Randomization Passed!
+[GEN] rst=0,d=0,q=0
+Scoreboard Passed!
+[SCB]:PASS => rst=1,d=1,q=0
+Scoreboard Passed!
+[SCB]:PASS => rst=0,d=0,q=0
+Scoreboard Passed!
+[SCB]:PASS => rst=1,d=1,q=0
+Scoreboard Passed!
+[SCB]:PASS => rst=1,d=0,q=0
+Scoreboard Passed!
+[SCB]:PASS => rst=0,d=0,q=0
+Scoreboard Passed!
+[SCB]:PASS => rst=0,d=0,q=0
+Scoreboard Passed!
+[SCB]:PASS => rst=1,d=0,q=0
+Scoreboard Passed!
+[SCB]:PASS => rst=1,d=1,q=0
+Scoreboard Passed!
+[SCB]:PASS => rst=0,d=1,q=1
+Scoreboard Passed!
+[SCB]:PASS => rst=0,d=0,q=0
+Simulation complete via $finish(1) at time 96 NS + 0
+./testbench.sv:19     $finish;
+xcelium> exit
+TOOL:	xrun	25.03-s001: Exiting on Oct 11, 2026 at 06:28:35 EDT  (total: 00:00:02)
+Done
