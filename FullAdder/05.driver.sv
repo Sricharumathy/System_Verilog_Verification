@@ -1,19 +1,20 @@
 class driver;
-  mailbox gen2drive;
   transaction trans;
-  virtual intf vif;
-  function new(mailbox gen2drive, virtual intf vif);
-    trans=new();
+  mailbox g2d;
+  virtual intff vif;
+  function new(mailbox g2d,virtual intff vif);
+    this.g2d=g2d;
     this.vif=vif;
-    this.gen2drive=gen2drive;
   endfunction
-  task run(); 
-    repeat(8) begin
-      #2;
-      gen2drive.get(trans);
-      vif.a=trans.a;
-      vif.b=trans.b;
-      vif.c=trans.c;      
-    end
+  task run();
+    repeat(2) 
+      begin
+        g2d.get(trans);
+        vif.a=trans.a;
+        vif.b=trans.b;
+        vif.c=trans.c;
+        trans.display("Driver");
+        #1;
+      end
   endtask
 endclass
