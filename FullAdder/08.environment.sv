@@ -1,28 +1,29 @@
 class environment;
+  transaction trans;
   generator gen;
   driver drive;
   monitor mon;
   scoreboard scb;
-  mailbox gen2drive;
-  mailbox mon2scb;
-  virtual intf vif;
+  mailbox g2d;
+  mailbox m2s;
+  virtual intff vif;
   
-  function new( virtual intf vif);
+  function new( virtual intff vif);
     this.vif=vif;
-    gen2drive=new();
-    mon2scb=new();
-    gen=new(gen2drive);
-    drive=new(gen2drive,vif);
-    mon=new(vif,mon2scb);
-    scb=new(mon2scb);
+    g2d=new();
+    m2s=new();
+    gen=new(g2d);
+    drive=new(g2d,vif);
+    mon=new(vif,m2s);
+    scb=new(m2s);
   endfunction
   
-  task run();
+  task test_run();
     fork 
       gen.run();
       drive.run();
       mon.run();
       scb.run();
-    join_any
+    join
   endtask
 endclass
