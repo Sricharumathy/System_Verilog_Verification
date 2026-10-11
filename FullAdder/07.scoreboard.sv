@@ -1,27 +1,28 @@
 class scoreboard;
-  bit exp_sum;
-  bit exp_carry;
-  mailbox mon2scb;
+  bit esum,ecarry;
   transaction trans;
-  function new (mailbox mon2scb);
-    this.mon2scb=mon2scb;
+  mailbox m2s;
+  function new(mailbox m2s);
+    this.m2s=m2s;
   endfunction
   task run();
-    forever begin
-      mon2scb.get(trans);
-      exp_sum=trans.a^trans.b^trans.c;
-      exp_carry=((trans.a & trans.b)|(trans.b & trans.c)|(trans.c & trans.a));
-      if(trans.sum ==exp_sum && trans.carry == exp_carry) begin
-        $display("Verification Passed");
-        $display("[SCB] PASS a=%0b b=%0b c=%0b | sum=%0b carry=%0b",
-                 trans.a, trans.b, trans.c, trans.sum, trans.carry);
+    repeat(2) begin
+      m2s.get(trans);
+      esum=trans.a^trans.b^trans.c;
+      ecarry=(trans.a&trans.b|trans.b&trans.c|trans.c&trans.a);
+      if(esum==trans.sum && ecarry==trans.carry) begin
+        $display("Verification Passed!");
+        trans.display("ScoreBoard");
       end
       else begin
-        $display("Verification Failed");
-         $display("[SCB] FAIL a=%0b b=%0b c=%0b | sum=%0b (exp %0b) carry=%0b (exp %0b)",
-                 trans.a, trans.b, trans.c, trans.sum, exp_sum, trans.carry, exp_carry);
-
+        $display("Verification Failed!");
+        trans.display("ScoreBoard");
       end
     end
   endtask
 endclass
+     
+      
+      
+      
+    
