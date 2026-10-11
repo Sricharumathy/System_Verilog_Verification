@@ -1,22 +1,27 @@
 class monitor;
   transaction trans;
-  virtual intf vif;
-  mailbox mon2scb;
-  function new(virtual intf vif,mailbox mon2scb);
+  virtual intff vif;
+  mailbox m2s;
+  function new(virtual intff vif,mailbox m2s);
     this.vif=vif;
-    this.mon2scb=mon2scb;
+    this.m2s=m2s;
   endfunction
   task run();
-    repeat(8) begin
-      #3;
+    #1;
+    repeat(2) 
+    begin
       trans=new();
-      trans.a=vif.a;
+      trans.a= vif.a;
       trans.b=vif.b;
       trans.c=vif.c;
       trans.sum=vif.sum;
       trans.carry=vif.carry;
-      mon2scb.put(trans);
-      
+      m2s.put(trans);
+      trans.display("Monitor");
+      #2;
     end
   endtask
 endclass
+      
+      
+      
