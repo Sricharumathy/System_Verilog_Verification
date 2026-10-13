@@ -1,0 +1,55 @@
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+Randomization Passed
+[GEN]-->rst=0,mode=0
+Randomization Passed
+[GEN]-->rst=0,mode=0
+Randomization Passed
+[GEN]-->rst=0,mode=1
+Randomization Passed
+[GEN]-->rst=0,mode=0
+Randomization Passed
+[GEN]-->rst=0,mode=1
+Randomization Passed
+[GEN]-->rst=1,mode=1
+Randomization Passed
+[GEN]-->rst=0,mode=0
+Randomization Passed
+[GEN]-->rst=1,mode=1
+Randomization Passed
+[GEN]-->rst=0,mode=0
+Randomization Passed
+[GEN]-->rst=0,mode=0
+[Mon]-->rst=0,mode=0,count=1111
+exp_count=1111 == trans.count =1111
+ScoreBoard Passed
+[Mon]-->rst=0,mode=0,count=1110
+exp_count=1110 == trans.count =1110
+ScoreBoard Passed
+[Mon]-->rst=0,mode=1,count=1111
+exp_count=1111 == trans.count =1111
+ScoreBoard Passed
+[Mon]-->rst=0,mode=0,count=1110
+exp_count=1110 == trans.count =1110
+ScoreBoard Passed
+[Mon]-->rst=0,mode=1,count=1111
+exp_count=1111 == trans.count =1111
+ScoreBoard Passed
+[Mon]-->rst=1,mode=1,count=0000
+exp_count=0000 == trans.count =0000
+ScoreBoard Passed
+[Mon]-->rst=0,mode=0,count=1111
+exp_count=1111 == trans.count =1111
+ScoreBoard Passed
+[Mon]-->rst=1,mode=1,count=0000
+exp_count=0000 == trans.count =0000
+ScoreBoard Passed
+[Mon]-->rst=0,mode=0,count=1111
+exp_count=1111 == trans.count =1111
+ScoreBoard Passed
+[Mon]-->rst=0,mode=0,count=1110
+exp_count=1110 == trans.count =1110
+ScoreBoard Passed
+Simulation complete via $finish(1) at time 116 NS + 0
+./testbench.sv:24     $finish;
+xcelium> exit
