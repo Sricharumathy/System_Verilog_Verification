@@ -1,0 +1,65 @@
+2026-11-06 14:54:20 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-access' '+rw' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Nov 06, 2026 at 09:54:21 EST
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		testbench
+Loading snapshot worklib.testbench:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+Randomization Success
+-----Generator-----
+[GEN] rst=1, we_a=0, we_b=0, addrA=100, addrB=100, data_inA=00100001, data_inB=01101100
+Randomization Success
+-----Generator-----
+[GEN] rst=0, we_a=1, we_b=0, addrA=111, addrB=001, data_inA=00001100, data_inB=10101010
+Randomization Success
+-----Generator-----
+[GEN] rst=0, we_a=0, we_b=1, addrA=100, addrB=101, data_inA=11011101, data_inB=01000111
+Randomization Success
+-----Generator-----
+[GEN] rst=0, we_a=1, we_b=1, addrA=001, addrB=100, data_inA=11100001, data_inB=11100100
+Randomization Success
+-----Generator-----
+[GEN] rst=0, we_a=1, we_b=1, addrA=011, addrB=001, data_inA=11101011, data_inB=01001000
+Randomization Success
+-----Generator-----
+[GEN] rst=0, we_a=0, we_b=1, addrA=010, addrB=011, data_inA=01001110, data_inB=10100010
+Randomization Success
+-----Generator-----
+[GEN] rst=0, we_a=0, we_b=1, addrA=111, addrB=111, data_inA=00110111, data_inB=11010110
+Randomization Success
+-----Generator-----
+[GEN] rst=0, we_a=1, we_b=1, addrA=110, addrB=011, data_inA=00001111, data_inB=11101010
+Randomization Success
+-----Generator-----
+[GEN] rst=0, we_a=1, we_b=1, addrA=100, addrB=010, data_inA=01011001, data_inB=01010110
+Randomization Success
+-----Generator-----
+[GEN] rst=0, we_a=0, we_b=0, addrA=100, addrB=101, data_inA=01111111, data_inB=01001100
+[PASS] Port A Expected=00 Actual=00
+[PASS] Port B Expected=00 Actual=00
+[PASS] Port A Expected=00 Actual=00
+[PASS] Port B Expected=00 Actual=00
+[PASS] Port A Expected=00 Actual=00
+[PASS] Port B Expected=00 Actual=00
+[PASS] Port A Expected=00 Actual=00
+[PASS] Port B Expected=00 Actual=00
+[PASS] Port A Expected=00 Actual=00
+[PASS] Port B Expected=00 Actual=00
+[PASS] Port A Expected=00 Actual=00
+[PASS] Port B Expected=00 Actual=00
+[PASS] Port A Expected=0c Actual=0c
+[PASS] Port B Expected=00 Actual=00
+[PASS] Port A Expected=0c Actual=0c
+[PASS] Port B Expected=00 Actual=00
+[PASS] Port A Expected=0c Actual=0c
+[PASS] Port B Expected=00 Actual=00
+[PASS] Port A Expected=59 Actual=59
+[PASS] Port B Expected=47 Actual=47
+Simulation complete via $finish(1) at time 101 NS + 0
+./testbench.sv:36     $finish;
+xcelium> exit
+TOOL:	xrun	25.03-s001: Exiting on Nov 06, 2026 at 09:54:22 EST  (total: 00:00:01)
+Done
